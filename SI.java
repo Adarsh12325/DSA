@@ -5,7 +5,7 @@ public class SI {
         int P = sc.nextInt();
         int R = sc.nextInt();
         int T = sc.nextInt();
-        Float SI = (P*R*T)/100F;reve
+        Float SI = (P*R*T)/100F;
         System.out.println("SI = "+SI);
     }
 }
