@@ -1,4 +1,3 @@
-import java.util.*;
 class node10{
     int data;
     node10 left;
@@ -11,34 +10,11 @@ class node10{
 }
 public class BinaryTree01 {
     public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-        int n,data;
-        n = sc.nextInt();
-        node10 root = null;
-        for(int i=0;i<n;i++){
-            data = sc.nextInt();
-            node10 newNode = new node10(data);
-            if(root==null){
-                root=newNode;
-            }else{
-                Queue<node10> q = new LinkedList<>();
-                q.add(root);
-                while(!q.isEmpty()){
-                    node10 temp = q.poll();
-                    if(temp.left==null){
-                        temp.left=newNode;
-                        break;
-                    }else{
-                        q.add(temp.left);
-                    }
-                    if(temp.right==null){
-                        temp.right=newNode;
-                        break;
-                    }else{
-                        q.add(temp.right);
-                    }
-                }
-            }
-        }
+        node10 Parent = new node10(30);
+        node10 child1 = new node10(20);
+        node10 child2 = new node10(40);
+        Parent.left = child1;
+        Parent.right = child2;
+        System.out.println(Parent.left.data);
     }
 }
